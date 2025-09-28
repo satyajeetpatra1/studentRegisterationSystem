@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registeration System</title>
+
+    <!-- favicon -->
+     <link rel="icon" href="./assets//favicon.ico">
+
+    <!-- google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&family=Righteous&family=Spectral:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- header with description -->
+
+    <header class="topbar">
+      <div class="container header-inner">
+        <span class="title heading-font">Student Registration System</span>
+        <span class="subtitle">Register, edit and delete student records.</span>
+      </div>
+    </header>
+
+    <main class="container main-grid">
+      <!-- Form Section for adding/editing student data -->
+      <section class="card form-card">
+        <h2 id="form-heading">Register Student</h2>
+        <form id="studentForm">
+          <div class="field-row">
+            <label for="name">Student Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Full name"
+              required
+            />
+            <small class="hint">Letters and spaces only</small>
+          </div>
+
+          <div class="field-row">
+            <label for="studentId">Student ID</label>
+            <input
+              id="studentId"
+              name="studentId"
+              type="number"
+              inputmode="numeric"
+              placeholder="Numeric ID"
+              required
+            />
+            <small class="hint">Numbers only</small>
+          </div>
+
+          <div class="field-row">
+            <label for="email">Email ID</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="student@example.com"
+              required
+            />
+          </div>
+
+          <div class="field-row">
+            <label for="contact">Contact Number</label>
+            <input
+              id="contact"
+              name="contact"
+              type="number"
+              inputmode="tel"
+              placeholder="10 digits"
+              required
+            />
+            <small class="hint">10 digits</small>
+          </div>
+
+          <div class="form-actions">
+            <button id="submitBtn" type="submit" class="btn primary-btn">
+              Add Student
+            </button>
+            <button id="resetBtn" type="reset" class="btn reset-btn">
+              Reset
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Display Section for student's data -->
+      <section class="card list-card">
+        <h2 id="list-heading">Registered Students</h2>
+
+        <div id="listContainer" class="list-container">
+          <!-- Rows are added by JS -->
+          <table id="studentsTable" class="students-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Student Name</th>
+                <th>Student ID</th>
+                <th>Email ID</th>
+                <th>Contact No.</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="studentsTbody">
+              <!-- rows -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="list-footer">
+          <small id="countInfo">No records yet.</small>
+          <button
+            id="clearAllBtn"
+            class="btn danger"
+            title="Delete all records"
+          >
+            Clear All
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <small
+          >Created by Satyajeet for Internshala assignment | Simple HTML / CSS /
+          JS</small
+        >
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
